@@ -4,20 +4,38 @@ using System.Text;
 
 namespace Integration
 {
+	class User
+	{
+		private string Name;
+		private string Email;
+		
+		public User(string name, string email)
+		{
+			Name = name;
+			Email = email;
+		}
+
+		public override string ToString()
+		{
+			return "User name:\t" + Name + "\nUser email:\t" + Email;
+		}
+	}
+
 	class Program
 	{
 		static void Main(string[] args)
 		{
 			string name;
+			string email;
 
-			Console.WriteLine("Hello, User!");
-			Console.Write("Your name: ");
+			Console.WriteLine("Enter your name");
+			name = Console.ReadLine();
 
-			name  = Console.ReadLine();
+			Console.WriteLine("Enter your email");
+			email = Console.ReadLine();
 
-			Console.WriteLine("Hello, {0}!", name);
-
-			Console.ReadKey();
+			User user = new User(name, email);
+			Console.WriteLine(user.ToString());
 		}
 	}
 }
