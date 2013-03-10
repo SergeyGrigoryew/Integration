@@ -8,7 +8,14 @@ namespace Integration
 	{
 		static void Main(string[] args)
 		{
-			Console.WriteLine("Hello, World!");
+			string name;
+
+			Console.WriteLine("Hello, User!");
+			Console.Write("Your name: ");
+
+			name  = Console.ReadLine();
+
+			Console.WriteLine("Hello, {0}", name);
 		}
 	}
 }
